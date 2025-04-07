@@ -1,0 +1,174 @@
+/* Style pour la landing page */
+.landing-page {
+  padding: 30px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Style pour le formulaire de contact */
+.contact-form-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #e9ecef;
+  border-radius: 10px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+button.submit-button {
+  background-color: #28a745;
+}
+
+button.submit-button:hover {
+  background-color: #218838;
+}
+
+/* 📌 Style spécifique pour le test de stress */
+.stress-test-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.stress-test-container h2 {
+  text-align: center;
+  color: #343a40;
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-section input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.question {
+  margin-bottom: 15px;
+}
+
+.question label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.question select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 📌 Style pour la section des résultats */
+.result-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style des boutons de navigation */
+.button-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.button-group button {
+  margin: 5px;
+}
+.landing-container {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+.landing-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #28a745;
+  color: white;
+}
+
+.form-container, .stress-test-container {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.result-section {
+  margin-top: 20px;
+  font-weight: bold;
+  text-align: center;
+}
