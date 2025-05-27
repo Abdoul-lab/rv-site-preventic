@@ -64,7 +64,7 @@ function Header() {
                 <i className="bi bi-chevron-down"></i>
               </a>
               <ul style={{ display: isDropdownOpen[1] ? 'block' : 'none' }}>
-                <li><Link to="/Formations" onClick={closeMenu}>ESPACE Formations</Link></li>
+                <li><Link to="/offer#medicale" onClick={closeMenu}>ESPACE XXX</Link></li>
                 <li><Link to="/consultations" onClick={closeMenu}>ESPACE Consultations</Link></li>
                 <li><Link to="/outilsRessources" onClick={closeMenu}>ESPACE Outils & ressources</Link></li>
 

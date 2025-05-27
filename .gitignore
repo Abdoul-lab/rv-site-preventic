@@ -1,4 +1,4 @@
-# Logs
+`# Logs
 logs
 *.log
 npm-debug.log*
@@ -28,3 +28,4 @@ dist-ssr
 *.mov
 *.avi
 src\assets\img\slide\prenventic_afric.mp4
+`
