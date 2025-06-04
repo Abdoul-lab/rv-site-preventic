@@ -24,8 +24,8 @@ dist-ssr
 *.sw?
 
 # Ignore les vidéos
-*.mp4
+
 *.mov
 *.avi
-src\assets\img\slide\prenventic_afric.mp4
+
 `
