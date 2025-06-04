@@ -37,7 +37,7 @@ function Home() {
               <div className="carousel-inner" style={{ borderRadius: "20px" }}>
                 <div className="carousel-item active" data-bs-interval="10000">
                   <video width="100%" controls autoPlay muted>
-                    <source src="public\assets\prenventic_afric.mp4" type="video/mp4" />
+                    <source src="src\assets\prenventic_afric.mp4" type="video/mp4" />
                   </video>
                 </div>
                 {[img1, img2, img3, img4, img5].map((image, index) => (
