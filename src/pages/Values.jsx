@@ -58,7 +58,7 @@ const teamMembers = [
 ];
 
 const TeamMember = ({ name, role, competence, image }) => (
-  <div className="col-lg-6 mt-4">
+  <div className="col-lg-6 mt-2">
     <div className="member d-flex align-items-start">
       <div className="pic">
         <img src={image} className="img-fluid" alt={name} />
@@ -96,22 +96,21 @@ const Values = () => {
 
       {/* ======= Histoire ======= */}
       <section className="about container">
-        <div className="section-title">
+        <div className="section">
           <h3>Histoire de l'entreprise</h3>
-          
         </div>
         <p>
           Notre histoire se confond avec l’ambition d’aider toutes les organisations à avoir une croissance soutenue grâce à des ressources humaines en bonne santé, disponibles et motivées.
         </p>
 
-        <div className="section-title mt-5">
+        <div className="section mt-5">
           <h3>Notre vision</h3>
         </div>
         <p>
           Aider à créer des conditions de travail sûres et sécurisantes, contribuer à bâtir une équipe en bonne santé, accompagner pour obtenir une croissance soutenue.
         </p>
 
-        <div className="section-title mt-5">
+        <div className="section mt-5">
           <h3>Nos valeurs</h3>
         </div>
         <ul>
@@ -120,12 +119,9 @@ const Values = () => {
           <li><strong>L’ENGAGEMENT :</strong> Notre engagement à protéger la ressource la plus importante de toute entreprise, ses hommes, est notre boussole.</li>
           <li><strong>L’ÉCOUTE :</strong> Écouter, comprendre, accompagner nos clients à construire des entreprises en croissance continue grâce à des travailleurs motivés et en bonne santé.</li>
         </ul>
-      </section>
-
-      {/* ======= Team Section ======= */}
-      <section id="team" className="team">
-        <div className="container">
-          <div className="section-title">
+        <section id="team" className="team">
+        <div className="container"></div>
+        <div className="section">
             <h3>Notre Équipe</h3>
             
           </div><p>Présentation des membres clés avec leurs qualifications et expériences.</p>
@@ -134,12 +130,12 @@ const Values = () => {
               <TeamMember key={index} {...member} />
             ))}
           </div>
-        </div>
+          
       </section>
 
       {/* ======= Certifications ======= */}
-      <section className="certifications container mt-5 mb-5">
-        <div className="section-title">
+      <section className="certifications container">
+        <div className="section">
           <h3>Certifications et accréditations</h3>
         </div>
         <p>
@@ -155,6 +151,7 @@ const Values = () => {
           <li>Protection de l’environnement et écologie</li>
           <li>Spécialités plurivalentes de service aux personnes</li>
         </ul>
+      </section>
       </section>
     </main>
   );

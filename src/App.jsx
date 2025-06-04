@@ -33,25 +33,25 @@ function App() {
       <Header/>
       
       <Routes>
-        <Route path='/' element={<Home />} />
+        <Route path='/' element={<Home/>} />
         <Route path='/landingPage' element={<LandingPage/>} />
         <Route path='/formations' element={<Formations/>} />
         <Route path='/consultations' element={<Consultations/>} />
         <Route path='/outilsRessources' element={<OutilsRessources/>} />
-        <Route path='/adhesion' element={<Adhesion />} />
-        <Route path='/salariedVisit' element={<SalariedVisit />} />
-        <Route path='/medicalVisit' element={<MedicalVisit />} />
-        <Route path='/salaryMonitoring' element={<SalaryMonitoring />} />
-        <Route path='/document' element ={<Document />} />
-        <Route path='/questionsAnswers' element ={<QuestionsAnswers />} />
-        <Route path='/infoAdhesion' element ={<InfoAdhesion />} />
-        <Route path='/offer' element={<Offer />} />
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/values' element={<Values />} />
-        <Route path='/team' element={<Team />} />
-        <Route path='/statistics' element={<Statistics />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/Agenda' element={<Agenda />} />
+        <Route path='/adhesion' element={<Adhesion/>} />
+        <Route path='/salariedVisit' element={<SalariedVisit/>} />
+        <Route path='/medicalVisit' element={<MedicalVisit/>} />
+        <Route path='/salaryMonitoring' element={<SalaryMonitoring/>} />
+        <Route path='/document' element ={<Document/>} />
+        <Route path='/questionsAnswers' element ={<QuestionsAnswers/>} />
+        <Route path='/infoAdhesion' element ={<InfoAdhesion/>} />
+        <Route path='/offer' element={<Offer/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/values' element={<Values/>} />
+        <Route path='/team' element={<Team/>} />
+        <Route path='/statistics' element={<Statistics/>} />
+        <Route path='/about' element={<About/>} />
+        <Route path='/Agenda' element={<Agenda/>} />
       </Routes>
 
       <Chatbot/>

@@ -7,6 +7,7 @@ import img2 from "../assets/img/slide/IvoirePics3.jpg";
 import img3 from "../assets/img/slide/IvoirePics4.jpg";
 import img4 from "../assets/img/slide/IvoirePics5.jpg";
 import img5 from "../assets/img/slide/IvoirePics7.jpg";
+import LogoMarquee from "../components/marque";
 
 function Home() {
   const [showMore, setShowMore] = useState(false);
@@ -95,44 +96,8 @@ function Home() {
         </div>
       </div>
 
-      {/* Services Cards */}
-      <section id="services" className="services" style={{ backgroundColor: "#f1ebeb" }}>
-        <div className="container" style={{ backgroundColor: "#fff", padding: "10px", boxShadow: "0px 5px #888888" }}>
-          <div className="row">
-            <div className="col-md-3">
-              <div className="icon-box">
-                <i className="bi bi-briefcase"></i>
-                <h4><HashLink smooth to="/adhesion#adherer" style={{ color: "#ee7f00" }}>Adhérer</HashLink></h4>
-                <p>Quel que soit votre domaine d’activité, rejoignez-nous.</p>
-              </div>
-            </div>
-            <div className="col-md-3 mt-1 mt-md-0">
-              <div className="icon-box">
-                <i className="bi bi-card-checklist"></i>
-                <h4><Link to="/about" style={{ color: "#ee7f00" }}>Nous trouver</Link></h4>
-                <p>Découvrez où nous sommes situés.</p>
-              </div>
-            </div>
-            <div className="col-md-3 mt-1 mt-md-0">
-              <div className="icon-box">
-                <i className="bi bi-bar-chart"></i>
-                <h4><Link to="/agenda" style={{ color: "#ee7f00" }}>Votre agenda</Link></h4>
-                <p>Consultez notre agenda trimestriel.</p>
-              </div>
-            </div>
-            <div className="col-md-3 mt-1 mt-md-0">
-              <div className="icon-box">
-                <i className="bi bi-binoculars"></i>
-                <h4><Link to="/team" style={{ color: "#ee7f00" }}>Le mag</Link></h4>
-                <p>Découvrez notre magazine et nos actualités.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Témoignages Entreprises */}
-      <section className="container my-4">
+      <section className="container">
         <h4 className="text-center mb-3">Ils nous font confiance</h4>
         <div className="table-responsive">
           <table className="table table-bordered table-striped table-hover">
@@ -173,10 +138,47 @@ function Home() {
             </tbody>
           </table>
         </div>
+        <LogoMarquee/>
+      </section>
+
+      {/* Services Cards */}
+      <section id="services" className="services" style={{ backgroundColor: "#f1ebeb" }}>
+        <div className="container" style={{ backgroundColor: "#fff", padding: "10px", boxShadow: "0px 5px #888888" }}>
+          <div className="row">
+            <div className="col-md-3">
+              <div className="icon-box">
+                <i className="bi bi-briefcase"></i>
+                <h4><HashLink smooth to="/adhesion#adherer" style={{ color: "#ee7f00" }}>Adhérer</HashLink></h4>
+                <p>Quel que soit votre domaine d’activité, rejoignez-nous.</p>
+              </div>
+            </div>
+            <div className="col-md-3 mt-1 mt-md-0">
+              <div className="icon-box">
+                <i className="bi bi-card-checklist"></i>
+                <h4><Link to="/about" style={{ color: "#ee7f00" }}>Nous trouver</Link></h4>
+                <p>Découvrez où nous sommes situés.</p>
+              </div>
+            </div>
+            <div className="col-md-3 mt-1 mt-md-0">
+              <div className="icon-box">
+                <i className="bi bi-bar-chart"></i>
+                <h4><Link to="/agenda" style={{ color: "#ee7f00" }}>Votre agenda</Link></h4>
+                <p>Consultez notre agenda trimestriel.</p>
+              </div>
+            </div>
+            <div className="col-md-3 mt-1 mt-md-0">
+              <div className="icon-box">
+                <i className="bi bi-binoculars"></i>
+                <h4><Link to="/team" style={{ color: "#ee7f00" }}>Le mag</Link></h4>
+                <p>Découvrez notre magazine et nos actualités.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* CTA Newsletter */}
-      <section className="text-center my-5">
+      <section className="text-center">
         <h5>Recevez nos actualités et conseils santé en vous abonnant à notre newsletter</h5>
         <a
           href="https://docs.google.com/forms/d/e/1FAIpQLSfq4yaTSCTlKvHcMLkHFynfpOQCRuOILlboK2I4fDe0P1zbQg/viewform?usp=pp_url"

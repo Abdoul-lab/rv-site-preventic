@@ -64,9 +64,9 @@ function Header() {
                 <i className="bi bi-chevron-down"></i>
               </a>
               <ul style={{ display: isDropdownOpen[1] ? 'block' : 'none' }}>
-                <li><Link to="/offer#medicale" onClick={closeMenu}>ESPACE XXX</Link></li>
-                <li><Link to="/consultations" onClick={closeMenu}>ESPACE Consultations</Link></li>
-                <li><Link to="/outilsRessources" onClick={closeMenu}>ESPACE Outils & ressources</Link></li>
+                <li><Link to="/offer#medicale" onClick={closeMenu}>Espace</Link></li>
+                <li><Link to="/SalariedVisit" onClick={closeMenu}> Consultations</Link></li>
+                <li><Link to="/outilsRessources" onClick={closeMenu}> Outils & ressources</Link></li>
 
                 {/* <li className="dropdown" onClick={() => toggleDropdown(2)}>
                   <a href="/adhesion">
@@ -95,9 +95,9 @@ function Header() {
                 <i className="bi bi-chevron-down"></i>
               </a>
               <ul style={{ display: isDropdownOpen[3] ? 'block' : 'none' }}>
-                <li><HashLink smooth to="/salariedVisit#medicale" onClick={closeMenu}>ESPACE Articles</HashLink></li>
-                <li><HashLink smooth to="/salariedVisit/#formations" onClick={closeMenu}>ESPACE Etudes de cas</HashLink></li>
-                <li><HashLink smooth to="/salariedVisit#besoins" onClick={closeMenu}>ESPACE Webinaires</HashLink></li>
+                <li><HashLink smooth to="#" onClick={closeMenu}> Articles</HashLink></li>
+                <li><HashLink smooth to="#" onClick={closeMenu}> Etudes de cas</HashLink></li>
+                <li><HashLink smooth to="#" onClick={closeMenu}> Webinaires</HashLink></li>
               </ul>
             </li>
 
@@ -108,8 +108,8 @@ function Header() {
                 <i className="bi bi-chevron-down"></i>
               </a>
               <ul style={{ display: isDropdownOpen[4] ? 'block' : 'none' }}>
-                <li><HashLink smooth to="/offer#medicale" onClick={closeMenu}>ESPACE Evaluation des risques</HashLink></li>
-                <li><HashLink smooth to="/offer#soins" onClick={closeMenu}>ESPACE Quiz de Connaissances</HashLink></li>
+                <li><HashLink smooth to="#" onClick={closeMenu}> Evaluation des risques</HashLink></li>
+                <li><HashLink smooth to="#" onClick={closeMenu}> Quiz de Connaissances</HashLink></li>
                 {/* <li><HashLink smooth to="/offer#assistance" onClick={closeMenu}>L'assistance et le conseil</HashLink></li>
                 <li><HashLink smooth to="/offer#formations" onClick={closeMenu}>La formation</HashLink></li>
                 <li><HashLink smooth to="/offer#externalisation" onClick={closeMenu}>L’externalisation de la fonction SST</HashLink></li> */}
