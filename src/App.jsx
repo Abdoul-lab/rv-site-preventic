@@ -24,6 +24,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from './components/ScrollToTop';
 import './assets/css/style.css';
 import Chatbot from './components/Chatbot';
+import StressModal from './components/StressModal';
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path='/statistics' element={<Statistics/>} />
         <Route path='/about' element={<About/>} />
         <Route path='/Agenda' element={<Agenda/>} />
+        <Route path="/stressModal" elemnt={<StressModal/>}/>
       </Routes>
 
       <Chatbot/>

@@ -2,7 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo from "../assets/img/Logo.jpg";
+import StressModal from "./StressModal";
 import Chatbot from "./Chatbot";
+
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +35,19 @@ function Header() {
     };
   }, []);
 
-  return (
+    // Affiche automatiquement le modal de stress au premier chargement
+const autoShowModal = () => {
+  const modalEl = document.getElementById("stressModal");
+  if (modalEl && !sessionStorage.getItem("stressModalShown")) {
+    const modal = new window.bootstrap.Modal(modalEl);
+    modal.show();
+    sessionStorage.setItem("stressModalShown", "true");
+  }
+};
+
+autoShowModal();
+
+  return (<>
     <header id="header" className="fixed-top d-flex align-items-center">
       <div className="container d-flex align-items-center">
         <Link to="/" className="logo me-auto">
@@ -42,6 +56,12 @@ function Header() {
 
         <nav id="navbar" className={`navbar ${isMenuOpen ? "navbar-mobile" : ""}`}>
           <ul>
+            <li><a href="#" onClick={(e) => { e.preventDefault();
+              const modal = new window.bootstrap.Modal(document.getElementById("stressModal"));
+              modal.show(); }} >
+              Auto-évaluation du stress
+            </a>
+            </li>
             <li><Link to="/" className="active" onClick={closeMenu}>Accueil</Link></li>
             <li><Link to="/values" onClick={closeMenu}>A Propos</Link></li>
 
@@ -88,6 +108,8 @@ function Header() {
         </nav>
       </div>
     </header>
+    <StressModal/>
+    </>
   );
 }
 
