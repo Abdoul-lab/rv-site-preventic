@@ -33,11 +33,11 @@ function LogoMarquee() {
 
         .logo-marquee-track {
           display: flex;
-          animation: scroll-left 25s linear infinite;
+          animation: scroll-left 22s linear infinite;
         }
 
         .logo-marquee-track.reverse {
-          animation: scroll-right 25s linear infinite;
+          animation: scroll-right 20s linear infinite;
         }
 
         .logo-strip {

@@ -520,6 +520,46 @@ section {
   font-family: "Poppins", sans-serif;
   color: #556270;
 }
+.member {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+  height: 100%;
+  transition: 0.3s;
+}
+
+.member .pic img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+.member-info h4 {
+  font-weight: 700;
+  font-size: 18px;
+  color: #2c4964;
+  margin-bottom: 5px;
+}
+
+.member-info span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6c757d;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.member-info .social a {
+  color: #37517e;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.member-info .social a:hover {
+  color: #47b2e4;
+}
 
 /*--------------------------------------------------------------
 # Breadcrumbs

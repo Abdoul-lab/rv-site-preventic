@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
+
 import img1 from "../assets/img/slide/IvoirePics6.jpg";
 import img2 from "../assets/img/slide/IvoirePics3.jpg";
 import img3 from "../assets/img/slide/IvoirePics4.jpg";
 import img4 from "../assets/img/slide/IvoirePics5.jpg";
 import img5 from "../assets/img/slide/IvoirePics7.jpg";
 import LogoMarquee from "../components/marque";
+
 
 function Home() {
   const [showMore, setShowMore] = useState(false);
@@ -36,9 +38,10 @@ function Home() {
               </div>
               <div className="carousel-inner" style={{ borderRadius: "20px" }}>
                 <div className="carousel-item active" data-bs-interval="10000">
-                  <video width="100%" controls autoPlay muted>
-                    <source src="src\assets\prenventic_afric.mp4" type="video/mp4" />
-                  </video>
+                  <video width="100%" controls autoPlay>
+                    <source src="/rv-site-preventic/assets/prenventic_afric.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
                 </div>
                 {[img1, img2, img3, img4, img5].map((image, index) => (
                   <div className="carousel-item" key={index} data-bs-interval="3000">
@@ -189,6 +192,7 @@ function Home() {
           S'inscrire à la newsletter
         </a>
       </section>
+   
     </div>
   );
 }

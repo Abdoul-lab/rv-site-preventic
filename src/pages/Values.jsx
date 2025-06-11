@@ -78,83 +78,121 @@ const TeamMember = ({ name, role, competence, image }) => (
   </div>
 );
 
-const Values = () => {
+const About = () => {
+  const sectionStyle = {
+    backgroundColor: '#fff',
+    marginTop: '-2%',
+    borderRadius: '15px',
+  };
+
   return (
     <main id="main">
       {/* ======= Breadcrumbs ======= */}
-      <section id="breadcrumbs" className="breadcrumbs">
-        <div className="container">
-          <div className="d-flex justify-content-between align-items-center">
-            <h2>À propos</h2>
-            <ol>
-              <li><a href="/">Accueil</a></li>
-              <li>À propos</li>
-            </ol>
+      <section id="breadcrumbs" className="breadcrumbs" style={{ backgroundColor: '#fff' }}>
+        <div style={{ width: '100%' }}>
+          <div className="d-flex justify-content-between align-items-center" style={{ width: '100%', flexDirection: 'column' }}>
+            <img
+              src="src/assets/img/slide/5.jpg"
+              className="img-fluid"
+              alt="À propos"
+              style={{ width: '30%' }}
+            />
+            <div className="container-fluid" style={{ backgroundColor: '#d94261', height: '15vh' }}>
+              <div>
+                <h2 style={{ textAlign: 'center', color: '#fff', fontWeight: 'bold' }}>À PROPOS</h2>
+              </div>
+            </div>
+
+            {/* Histoire */}
+            <div className="container about" style={sectionStyle}>
+              <div className="row content">
+                <div className="col-lg-12">
+                  <div id="histoire"></div>
+                  <h1>HISTOIRE DE L'ENTREPRISE</h1>
+                  <p className="fst-italic">
+                    Notre histoire se confond avec l’ambition d’aider toutes les organisations à avoir une croissance soutenue grâce à des ressources humaines en bonne santé, disponibles et motivées.
+                  </p>
+                </div>
+              </div>
+              <br /><br />
+            </div>
+
+            {/* Vision */}
+            <div className="container about" style={sectionStyle}>
+              <div className="row content">
+                <div className="col-lg-12">
+                  <div id="vision"></div>
+                  <h1>NOTRE VISION</h1>
+                  <p className="fst-italic">
+                    Aider à créer des conditions de travail sûres et sécurisantes, contribuer à bâtir une équipe en bonne santé, accompagner pour obtenir une croissance soutenue.
+                  </p>
+                </div>
+              </div>
+              <br /><br />
+            </div>
+
+            {/* Valeurs */}
+            <div className="container about" style={sectionStyle}>
+              <div className="row content">
+                <div className="col-lg-12">
+                  <div id="valeurs"></div>
+                  <h1>NOS VALEURS</h1>
+                  <ul className="fst-italic">
+                    <li><strong>LA RESPONSABILITÉ :</strong> Nous assumons la responsabilité des conséquences de nos décisions, actions et comportements pour préserver les intérêts de nos clients.</li>
+                    <li><strong>LA CONFIANCE :</strong> Nous travaillons à satisfaire les attentes de nos clients, à rester disponibles et à construire une relation durable de confiance.</li>
+                    <li><strong>L’ENGAGEMENT :</strong> Notre engagement à protéger la ressource la plus importante de toute entreprise, ses hommes, est notre boussole.</li>
+                    <li><strong>L’ÉCOUTE :</strong> Écouter, comprendre, accompagner nos clients à construire des entreprises en croissance continue grâce à des travailleurs motivés et en bonne santé.</li>
+                  </ul>
+                </div>
+              </div>
+              <br /><br />
+            </div>
+
+            {/* Équipe */}
+            <div className="container about" style={sectionStyle}>
+              <div className="row content">
+                <div className="col-lg-12">
+                  <div id="equipe"></div>
+                  <h1>NOTRE ÉQUIPE</h1>
+                  <p className="fst-italic">Présentation des membres clés avec leurs qualifications et expériences.</p>
+                  <div className="row">
+                    {teamMembers.map((member, index) => (
+                      <TeamMember key={index} {...member} />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <br /><br />
+            </div>
+
+            {/* Certifications */}
+            <div className="container about" style={sectionStyle}>
+              <div className="row content">
+                <div className="col-lg-12">
+                  <div id="certifications"></div>
+                  <h1>CERTIFICATIONS ET ACCRÉDITATIONS</h1>
+                  <p className="fst-italic">
+                    <strong>Preventic Afric</strong> est un centre médical reconnu par le ministère de la santé sous le numéro :
+                    <br />
+                    <em>N°0778/2025/MSHPCMU/DGSHP/ DEPPS/ DIR/SDGAESP/aan</em>
+                  </p>
+                  <p className="fst-italic">
+                    Il est également un cabinet de formation agréé par le Fonds de Développement de la Formation Professionnelle (FDFP) dans les domaines suivants :
+                  </p>
+                  <ul className="fst-italic">
+                    <li>Conditions de travail et ergonomie</li>
+                    <li>Protection de l’environnement et écologie</li>
+                    <li>Spécialités plurivalentes de service aux personnes</li>
+                  </ul>
+                </div>
+              </div>
+              <br /><br />
+            </div>
           </div>
         </div>
-      </section>
-
-      {/* ======= Histoire ======= */}
-      <section className="about container">
-        <div className="section">
-          <h3>Histoire de l'entreprise</h3>
-        </div>
-        <p>
-          Notre histoire se confond avec l’ambition d’aider toutes les organisations à avoir une croissance soutenue grâce à des ressources humaines en bonne santé, disponibles et motivées.
-        </p>
-
-        <div className="section mt-5">
-          <h3>Notre vision</h3>
-        </div>
-        <p>
-          Aider à créer des conditions de travail sûres et sécurisantes, contribuer à bâtir une équipe en bonne santé, accompagner pour obtenir une croissance soutenue.
-        </p>
-
-        <div className="section mt-5">
-          <h3>Nos valeurs</h3>
-        </div>
-        <ul>
-          <li><strong>LA RESPONSABILITÉ :</strong> Nous assumons la responsabilité des conséquences de nos décisions, actions et comportements pour préserver les intérêts de nos clients.</li>
-          <li><strong>LA CONFIANCE :</strong> Nous travaillons à satisfaire les attentes de nos clients, à rester disponibles et à construire une relation durable de confiance.</li>
-          <li><strong>L’ENGAGEMENT :</strong> Notre engagement à protéger la ressource la plus importante de toute entreprise, ses hommes, est notre boussole.</li>
-          <li><strong>L’ÉCOUTE :</strong> Écouter, comprendre, accompagner nos clients à construire des entreprises en croissance continue grâce à des travailleurs motivés et en bonne santé.</li>
-        </ul>
-        <section id="team" className="team">
-        <div className="container"></div>
-        <div className="section">
-            <h3>Notre Équipe</h3>
-            
-          </div><p>Présentation des membres clés avec leurs qualifications et expériences.</p>
-          <div className="row">
-            {teamMembers.map((member, index) => (
-              <TeamMember key={index} {...member} />
-            ))}
-          </div>
-          
-      </section>
-
-      {/* ======= Certifications ======= */}
-      <section className="certifications container">
-        <div className="section">
-          <h3>Certifications et accréditations</h3>
-        </div>
-        <p>
-          <strong>Preventic Afric</strong> est un centre médical reconnu par le ministère de la santé sous le numéro :
-          <br />
-          <em>N°0778/2025/MSHPCMU/DGSHP/ DEPPS/ DIR/SDGAESP/aan</em>
-        </p>
-        <p>
-          Il est également un cabinet de formation agréé par le Fonds de Développement de la Formation Professionnelle (FDFP) dans les domaines suivants :
-        </p>
-        <ul>
-          <li>Conditions de travail et ergonomie</li>
-          <li>Protection de l’environnement et écologie</li>
-          <li>Spécialités plurivalentes de service aux personnes</li>
-        </ul>
-      </section>
       </section>
     </main>
   );
 };
 
-export default Values;
+export default About;
