@@ -58,8 +58,8 @@ const teamMembers = [
 ];
 
 const TeamMember = ({ name, role, competence, image }) => (
-  <div className="col-lg-6 mt-2">
-    <div className="member d-flex align-items-start">
+  <div className="col-lg-4 mt-2">
+    <div className="member flex align-items-start">
       <div className="pic">
         <img src={image} className="img-fluid" alt={name} />
       </div>
@@ -108,7 +108,7 @@ const About = () => {
               <div className="row content">
                 <div className="col-lg-12">
                   <div id="histoire"></div>
-                  <h1>HISTOIRE DE L'ENTREPRISE</h1>
+                  <h1>Histroire de l'entreprise</h1>
                   <p className="fst-italic">
                     Notre histoire se confond avec l’ambition d’aider toutes les organisations à avoir une croissance soutenue grâce à des ressources humaines en bonne santé, disponibles et motivées.
                   </p>
@@ -122,7 +122,7 @@ const About = () => {
               <div className="row content">
                 <div className="col-lg-12">
                   <div id="vision"></div>
-                  <h1>NOTRE VISION</h1>
+                  <h1>Notre vision</h1>
                   <p className="fst-italic">
                     Aider à créer des conditions de travail sûres et sécurisantes, contribuer à bâtir une équipe en bonne santé, accompagner pour obtenir une croissance soutenue.
                   </p>
@@ -136,12 +136,12 @@ const About = () => {
               <div className="row content">
                 <div className="col-lg-12">
                   <div id="valeurs"></div>
-                  <h1>NOS VALEURS</h1>
+                  <h1>Nos valeurs</h1>
                   <ul className="fst-italic">
-                    <li><strong>LA RESPONSABILITÉ :</strong> Nous assumons la responsabilité des conséquences de nos décisions, actions et comportements pour préserver les intérêts de nos clients.</li>
-                    <li><strong>LA CONFIANCE :</strong> Nous travaillons à satisfaire les attentes de nos clients, à rester disponibles et à construire une relation durable de confiance.</li>
-                    <li><strong>L’ENGAGEMENT :</strong> Notre engagement à protéger la ressource la plus importante de toute entreprise, ses hommes, est notre boussole.</li>
-                    <li><strong>L’ÉCOUTE :</strong> Écouter, comprendre, accompagner nos clients à construire des entreprises en croissance continue grâce à des travailleurs motivés et en bonne santé.</li>
+                    <li><strong>La responsabilité :</strong> Nous assumons la responsabilité des conséquences de nos décisions, actions et comportements pour préserver les intérêts de nos clients.</li>
+                    <li><strong>La confiance :</strong> Nous travaillons à satisfaire les attentes de nos clients, à rester disponibles et à construire une relation durable de confiance.</li>
+                    <li><strong>L’engagement :</strong> Notre engagement à protéger la ressource la plus importante de toute entreprise, ses hommes, est notre boussole.</li>
+                    <li><strong>L’écoute :</strong> Écouter, comprendre, accompagner nos clients à construire des entreprises en croissance continue grâce à des travailleurs motivés et en bonne santé.</li>
                   </ul>
                 </div>
               </div>
@@ -153,7 +153,7 @@ const About = () => {
               <div className="row content">
                 <div className="col-lg-12">
                   <div id="equipe"></div>
-                  <h1>NOTRE ÉQUIPE</h1>
+                  <h1>Notre équipe</h1>
                   <p className="fst-italic">Présentation des membres clés avec leurs qualifications et expériences.</p>
                   <div className="row">
                     {teamMembers.map((member, index) => (
@@ -170,7 +170,7 @@ const About = () => {
               <div className="row content">
                 <div className="col-lg-12">
                   <div id="certifications"></div>
-                  <h1>CERTIFICATIONS ET ACCRÉDITATIONS</h1>
+                  <h1>Certifications et accréditations</h1>
                   <p className="fst-italic">
                     <strong>Preventic Afric</strong> est un centre médical reconnu par le ministère de la santé sous le numéro :
                     <br />

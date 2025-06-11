@@ -22,7 +22,7 @@ const Chatbot = () => {
     setTimeout(() => {
       setMessages((prevMessages) => [
         ...prevMessages,
-        { user: 'bot', text: `Bot: Vous avez dit : "${input}"` }, // Exemple simple
+        { user: 'bot', text: `Vous avez dit : "${input}"` }, // Exemple simple
       ]);
       setLoading(false); // Arrêter le chargement
     }, 1000); // Simuler un délai pour la réponse
@@ -35,14 +35,14 @@ const Chatbot = () => {
         className="chatbot-toggle-btn"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? 'Fermer Chatbot' : 'Ouvrir Chatbot'}
+        {isOpen ? 'Fermer Chatbot' : 'En ligne'}
       </button>
 
       {/* Chatbot UI */}
       {isOpen && (
         <div className="chatbot-container">
           <div className="chatbot-header">
-            <span>Chatbot</span>
+            <span>Assistance Virtuel</span>
             <button
               className="chatbot-close-btn"
               onClick={() => setIsOpen(false)}
@@ -60,7 +60,7 @@ const Chatbot = () => {
                 {msg.text}
               </div>
             ))}
-            {loading && <div className="loading">Le bot réfléchit...</div>}
+            {loading && <div className="loading">...</div>}
           </div>
 
           <div className="chatbot-input">

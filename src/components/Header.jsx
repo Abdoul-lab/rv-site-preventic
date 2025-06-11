@@ -4,28 +4,19 @@ import { HashLink } from "react-router-hash-link";
 import logo from "../assets/img/Logo.jpg";
 import Chatbot from "./Chatbot";
 
-
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState({});
-  const [showStressModal, setShowStressModal] = useState(false);
-
-  // Afficher le modal seulement une fois par session
-  useEffect(() => {
-    const hasSeenModal = sessionStorage.getItem("hasSeenStressModal");
-    if (!hasSeenModal) {
-      setShowStressModal(true);
-      sessionStorage.setItem("hasSeenStressModal", "true");
-    }
-  }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   const toggleDropdown = (index) => {
     setIsDropdownOpen((prev) => ({
       ...prev,
       [index]: !prev[index],
     }));
   };
+
   const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
@@ -53,6 +44,7 @@ function Header() {
           <ul>
             <li><Link to="/" className="active" onClick={closeMenu}>Accueil</Link></li>
             <li><Link to="/values" onClick={closeMenu}>A Propos</Link></li>
+
             <li className="dropdown" onClick={() => toggleDropdown(1)}>
               <a href="#" className={`${isDropdownOpen[1] ? 'active' : ''}`}>
                 <span>Services</span><i className="bi bi-chevron-down"></i>
@@ -63,6 +55,7 @@ function Header() {
                 <li><Link to="/outilsRessources" onClick={closeMenu}>Outils & ressources</Link></li>
               </ul>
             </li>
+
             <li className="dropdown" onClick={() => toggleDropdown(3)}>
               <a href="#" className={`${isDropdownOpen[3] ? 'active' : ''}`}>
                 <span>Ressources</span><i className="bi bi-chevron-down"></i>
@@ -73,6 +66,7 @@ function Header() {
                 <li><HashLink smooth to="#" onClick={closeMenu}>Webinaires</HashLink></li>
               </ul>
             </li>
+
             <li className="dropdown" onClick={() => toggleDropdown(4)}>
               <a href="#" className={`${isDropdownOpen[4] ? 'active' : ''}`}>
                 <span>Outils interactif</span><i className="bi bi-chevron-down"></i>
@@ -82,14 +76,17 @@ function Header() {
                 <li><HashLink smooth to="#" onClick={closeMenu}>Quiz de Connaissances</HashLink></li>
               </ul>
             </li>
+
             <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
             <li><Link to="#" className="active" onClick={closeMenu}><Chatbot /></Link></li>
           </ul>
 
-          <i className={`bi bi-list mobile-nav-toggle ${isMenuOpen ? "bi-x" : ""}`} onClick={toggleMenu}></i>
+          <i
+            className={`bi bi-list mobile-nav-toggle ${isMenuOpen ? "bi-x" : ""}`}
+            onClick={toggleMenu}
+          ></i>
         </nav>
       </div>
-
     </header>
   );
 }
