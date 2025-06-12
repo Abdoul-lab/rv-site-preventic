@@ -5,13 +5,13 @@ const teamMembers = [
     name: "Dr BROU N’Dri",
     role: "Consultant Formateur / Directeur Associé",
     competence: "Médecin du travail / Certifié ISO 45001 Lead Implementer",
-    image: "src/assets/img/team/team-1.jpg",
+    image: "/rv-site-preventic/src/assets/img/team/team-1.jpg",
   },
   {
     name: "Dr VE Sandrine",
     role: "Médecin vacataire",
     competence: "Médecin du travail / Médecin urgentiste",
-    image: "src/assets/img/team/team-2.jpg",
+    image: "/rv-site-preventic/src/assets/img/team/team-2.jpg",
   },
   {
     name: "Dr MANI Paule",
