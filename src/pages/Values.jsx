@@ -23,37 +23,37 @@ const teamMembers = [
     name: "Dr TIEMOU Léonard",
     role: "Médecin vacataire",
     competence: "Médecin Psychiatre / DESS santé au travail",
-    image: "/assets/img/team/team-4.jpg",
+    image: "/rv-site-preventic/assets/team/team-4.jpg",
   },
   {
     name: "Mr OBLOU Arthur",
     role: "Infirmier permanent",
     competence: "Infirmier diplômé d’état",
-    image: "/assets/img/team/team-5.jpg",
+    image: "/rv-site-preventic/assets/team/team-1.jpg",
   },
   {
     name: "Mr YEBOUA Koffi",
     role: "Infirmier vacataire",
     competence: "Infirmier diplômé d’état",
-    image: "src/assets/img/team/team-6.jpg",
+    image: "/rv-site-preventic/assets/team/team-2.jpg",
   },
   {
     name: "Mr ANGOUA Francois",
     role: "Infirmier vacataire",
     competence: "Infirmier diplômé d’état",
-    image: "src/assets/img/team/team-7.jpg",
+    image: "/rv-site-preventic/assets/team/team-3.jpg",
   },
   {
     name: "Mr YEBOUE Perre",
     role: "Responsable admin et financier",
     competence: "Comptable",
-    image: "src/assets/img/team/team-8.jpg",
+    image: "/rv-site-preventic/assets/team/team-4.jpg",
   },
   {
     name: "Mlle KADJO Armelle",
     role: "Communication clientèle",
     competence: "Secrétaire",
-    image: "src/assets/img/team/team-9.jpg",
+    image: "/rv-site-preventic/assets/team/team-1.jpg",
   },
 ];
 
@@ -92,14 +92,14 @@ const About = () => {
         <div style={{ width: '100%' }}>
           <div className="d-flex justify-content-between align-items-center" style={{ width: '100%', flexDirection: 'column' }}>
             <img
-              src="src/assets/img/slide/5.jpg"
+              src="/rv-site-preventic/7.jpg"
               className="img-fluid"
               alt="À propos"
-              style={{ width: '30%' }}
+              style={{ width: '30%'}}
             />
             <div className="container-fluid" style={{ backgroundColor: '#d94261', height: '15vh' }}>
               <div>
-                <h2 style={{ textAlign: 'center', color: '#fff', fontWeight: 'bold' }}>À PROPOS</h2>
+                <h2 style={{ textAlign: 'center', color: '#fff', fontWeight: 'bold', marginTop:'25px' }}>À PROPOS DE NOUS</h2>
               </div>
             </div>
 

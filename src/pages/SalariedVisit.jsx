@@ -16,10 +16,10 @@ const SalariedVisit = () => {
     <section id="breadcrumbs" className="breadcrumbs" style={{ backgroundColor: "#fff" }}>
       <div style={{ width: "100%" }}>
         <div className="d-flex justify-content-between align-items-center" style={{ width: "100%", flexDirection: "column" }}>
-          <img src="src/assets/img/slide/5.jpg" className="img-fluid" alt="Slide" style={{ width: "30%" }} />
+          <img src="/rv-site-preventic/6.jpg" className="img-fluid" alt="Slide" style={{ width: "40%" }} />
           
           <div className="container-fluid" style={{ backgroundColor: "#d94261", height: "15vh" }}>
-            <h2 style={{ textAlign: "center", color: "#fff", fontWeight: "bold" }}>ESPACE TRAVAILLEURS</h2>
+            <h2 style={{ textAlign: "center", color: "#fff", fontWeight: "bold", marginTop: "25px" }}>ESPACE CONSULTATION</h2>
           </div>
 
           {/* Section Visite Médicale */}

@@ -14,10 +14,10 @@ const Offer = () => {
         <div style={{ width: '100%' }}>
           <div className="d-flex justify-content-between align-items-center flex-column" style={{ width: '100%' }}>
             <img
-              src="src/assets/img/slide/5.jpg"
+              src="/rv-site-preventic/5.jpg"
               className="img-fluid"
               alt=""
-              style={{ width: '30%' }}
+              style={{ width: '20%'}}
             />
             <div className="container-fluid" style={{ backgroundColor: '#d94261', height: '15vh' }}>
               <div>
