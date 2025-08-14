@@ -9,6 +9,7 @@ import img3 from "../assets/img/slide/IvoirePics4.jpg";
 import img4 from "../assets/img/slide/IvoirePics5.jpg";
 import img5 from "../assets/img/slide/IvoirePics7.jpg";
 import LogoMarquee from "../components/marque";
+import Chatbot from "../components/Chatbot";
 
 
 function Home() {
@@ -192,7 +193,7 @@ function Home() {
           S'inscrire à la newsletter
         </a>
       </section>
-   
+      <Chatbot autoOpen={true} />
     </div>
   );
 }
