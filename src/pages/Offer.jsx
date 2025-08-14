@@ -14,7 +14,7 @@ const Offer = () => {
         <div style={{ width: '100%' }}>
           <div className="d-flex justify-content-between align-items-center flex-column" style={{ width: '100%' }}>
             <img
-              src="/rv-site-preventic/5.jpg"
+              src="/5.jpg"
               className="img-fluid"
               alt=""
               style={{ width: '20%'}}

@@ -5,55 +5,55 @@ const teamMembers = [
     name: "Dr BROU N’Dri",
     role: "Consultant Formateur / Directeur Associé",
     competence: "Médecin du travail / Certifié ISO 45001 Lead Implementer",
-    image: "/rv-site-preventic/assets/team/team-1.jpg",
+    image: "/assets/team/team-1.jpg",
   },
   {
     name: "Dr VE Sandrine",
     role: "Médecin vacataire",
     competence: "Médecin du travail / Médecin urgentiste",
-    image: "/rv-site-preventic/assets/team/team-2.jpg",
+    image: "/assets/team/team-2.jpg",
   },
   {
     name: "Dr MANI Paule",
     role: "Médecin vacataire",
     competence: "Médecin du travail",
-    image: "/rv-site-preventic/assets/team/team-3.jpg",
+    image: "/assets/team/team-3.jpg",
   },
   {
     name: "Dr TIEMOU Léonard",
     role: "Médecin vacataire",
     competence: "Médecin Psychiatre / DESS santé au travail",
-    image: "/rv-site-preventic/assets/team/team-4.jpg",
+    image: "/assets/team/team-4.jpg",
   },
   {
     name: "Mr OBLOU Arthur",
     role: "Infirmier permanent",
     competence: "Infirmier diplômé d’état",
-    image: "/rv-site-preventic/assets/team/team-1.jpg",
+    image: "/assets/team/team-1.jpg",
   },
   {
     name: "Mr YEBOUA Koffi",
     role: "Infirmier vacataire",
     competence: "Infirmier diplômé d’état",
-    image: "/rv-site-preventic/assets/team/team-2.jpg",
+    image: "/assets/team/team-2.jpg",
   },
   {
     name: "Mr ANGOUA Francois",
     role: "Infirmier vacataire",
     competence: "Infirmier diplômé d’état",
-    image: "/rv-site-preventic/assets/team/team-3.jpg",
+    image: "/assets/team/team-3.jpg",
   },
   {
     name: "Mr YEBOUE Perre",
     role: "Responsable admin et financier",
     competence: "Comptable",
-    image: "/rv-site-preventic/assets/team/team-4.jpg",
+    image: "/assets/team/team-4.jpg",
   },
   {
     name: "Mlle KADJO Armelle",
     role: "Communication clientèle",
     competence: "Secrétaire",
-    image: "/rv-site-preventic/assets/team/team-1.jpg",
+    image: "/assets/team/team-1.jpg",
   },
 ];
 
@@ -92,7 +92,7 @@ const About = () => {
         <div style={{ width: '100%' }}>
           <div className="d-flex justify-content-between align-items-center" style={{ width: '100%', flexDirection: 'column' }}>
             <img
-              src="/rv-site-preventic/7.jpg"
+              src="/7.jpg"
               className="img-fluid"
               alt="À propos"
               style={{ width: '30%'}}

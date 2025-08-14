@@ -40,7 +40,7 @@ function Home() {
               <div className="carousel-inner" style={{ borderRadius: "20px" }}>
                 <div className="carousel-item active" data-bs-interval="10000">
                   <video width="100%" controls autoPlay>
-                    <source src="/rv-site-preventic/assets/prenventic_afric.mp4" type="video/mp4" />
+                    <source src="/assets/prenventic_afric.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 </div>

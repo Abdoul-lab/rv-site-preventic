@@ -28,7 +28,7 @@ import StressModal from './components/StressModal';
 function App() {
   return (
     <>
-    <Router basename="/rv-site-preventic">
+    <Router>
       <ScrollToTop/>
       <Header/>
       
