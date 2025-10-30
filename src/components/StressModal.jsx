@@ -57,8 +57,25 @@ function StressModal() {
   const [result, setResult] = useState(null);
   const [submitClicked, setSubmitClicked] = useState(false);
 
-  // Ouvrir le modal uniquement via Bootstrap (trigger dans Header)
-  // Ici pas d'ouverture automatique
+  // Fix focus quand la modale est fermée (évite aria-hidden avec un descendant focusé)
+  useEffect(() => {
+    const modalEl = document.getElementById("stressModal");
+    if (!modalEl) return;
+
+    const handleHidden = () => {
+      if (document.activeElement) {
+        document.activeElement.blur(); // enlève focus du bouton Fermer
+      }
+      // Si la modale a été ouverte par un bouton, on remet le focus dessus
+      const triggerBtn = document.querySelector('[data-bs-target="#stressModal"]');
+      if (triggerBtn) triggerBtn.focus();
+    };
+
+    modalEl.addEventListener("hidden.bs.modal", handleHidden);
+    return () => {
+      modalEl.removeEventListener("hidden.bs.modal", handleHidden);
+    };
+  }, []);
 
   // Met à jour la réponse d'une question
   const handleResponseChange = (index, value) => {
@@ -75,10 +92,8 @@ function StressModal() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Calcul du score
     const score = responses.reduce((acc, cur) => acc + parseInt(cur, 10), 0);
 
-    // Analyse
     let message = "";
     let color = "";
 
@@ -102,7 +117,7 @@ function StressModal() {
     setResult({ score, message, color });
     setSubmitClicked(true);
 
-    // Envoie des données
+    // Envoi des données
     fetch("https://preventic-afric.com/api/save_response.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -126,7 +141,6 @@ function StressModal() {
     const modal = window.bootstrap.Modal.getInstance(modalEl);
     if (modal) modal.hide();
 
-    // Reset état pour permettre nouvelle utilisation
     setResponses(questions.map(() => "0"));
     setFormData({
       companyName: "",
@@ -292,7 +306,6 @@ function StressModal() {
             </div>
           </div>
         </div>
-
       </div>
 
       <style>{`

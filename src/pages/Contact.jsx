@@ -13,19 +13,33 @@ const Contact = () => {
       <section id="breadcrumbs" className="breadcrumbs" style={{ backgroundColor: '#fff' }}>
         <div style={{ width: '100%' }}>
           <div className="d-flex justify-content-between align-items-center flex-column" style={{ width: '100%' }}>
-            <img
-              src="src/assets/img/slide/5.jpg"
+            {/* <img
+              src=""
               className="img-fluid"
               alt=""
               style={{ width: '30%' }}
-            />
-            <div className="container-fluid" style={{ backgroundColor: '#d94261', height: '15vh' }}>
-              <div>
-                <h2 style={{ textAlign: 'center', color: '#fff', fontWeight: 'bold' }}>
-                  CONTACT
-                </h2>
-              </div>
-            </div>
+            /> */}
+            <div
+  className="container-fluid"
+  style={{
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // palette bleu → bleu foncé → orange
+    height: "15vh",
+  }}
+>
+  <div>
+    <h2
+      style={{
+        textAlign: "center",
+        color: "#fff",
+        fontWeight: "bold",
+        marginTop: "25px",
+      }}
+    >
+      CONTACTEZ-NOUS
+    </h2>
+  </div>
+</div>
+
 
             <div className="container about mx-auto" style={sectionContainerStyle}>
               <div className="row justify-content-center">
@@ -82,7 +96,24 @@ const Contact = () => {
                       <textarea className="form-control" name="message" rows="5" placeholder="Veuillez saisir votre message ici" required></textarea>
                     </div>
                     
-                    <div className="text-center"><button type="submit">Envoyer un message</button></div>
+                    <div className="text-center"><button
+  type="submit"
+  style={{
+    padding: "12px 28px",
+    fontWeight: "bold",
+    color: "#fff",
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // dégradé bleu → bleu foncé → orange
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+    transition: "transform 0.2s",
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+>
+  Envoyer un message
+</button>
+</div>
                   </form>
                 </div>
               </div>

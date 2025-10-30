@@ -92,16 +92,32 @@ const About = () => {
         <div style={{ width: '100%' }}>
           <div className="d-flex justify-content-between align-items-center" style={{ width: '100%', flexDirection: 'column' }}>
             <img
-              src="/7.jpg"
+              src="/5.jpg"
               className="img-fluid"
               alt="À propos"
               style={{ width: '30%'}}
             />
-            <div className="container-fluid" style={{ backgroundColor: '#d94261', height: '15vh' }}>
-              <div>
-                <h2 style={{ textAlign: 'center', color: '#fff', fontWeight: 'bold', marginTop:'25px' }}>À PROPOS DE NOUS</h2>
-              </div>
-            </div>
+            <div
+  className="container-fluid"
+  style={{
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // palette bleu → bleu foncé → orange
+    height: "15vh",
+  }}
+>
+  <div>
+    <h2
+      style={{
+        textAlign: "center",
+        color: "#fff",
+        fontWeight: "bold",
+        marginTop: "25px",
+      }}
+    >
+      À PROPOS DE NOUS
+    </h2>
+  </div>
+</div>
+
 
             {/* Histoire */}
             <div className="container about" style={sectionStyle}>

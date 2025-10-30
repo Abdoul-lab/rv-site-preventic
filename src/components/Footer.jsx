@@ -4,13 +4,19 @@ import logo from "../assets/img/Logo.jpg";
 
 function Footer() {
   return (
-    <footer id="footer" className="bg-dark text-white">
-      <div className="footer-top">
+    <footer
+      id="footer"
+      className="text-white"
+      style={{
+        background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // bleu → bleu foncé → orange
+      }}
+    >
+      <div className="footer py-5">
         <div className="container">
           <div className="row">
 
             {/* 1. Logo & Adresse */}
-            <div className="col-lg-3 col-md-6 footer-info">
+            <div className="col-lg-3 col-md-6 footer-info mb-4">
               <Link to="/" className="logo mb-3 d-inline-block">
                 <img src={logo} alt="Preventic-Afric" className="img-fluid" />
               </Link>
@@ -27,7 +33,7 @@ function Footer() {
             </div>
 
             {/* 2. Coordonnées */}
-            <div className="col-lg-3 col-md-6 footer-contact">
+            <div className="col-lg-3 col-md-6 footer-contact mb-4">
               <h4>Contact</h4>
               <p>
                 <strong>Tél:</strong> +225 25 21 00 63 22<br />
@@ -35,37 +41,56 @@ function Footer() {
                 <strong>Email:</strong> info@preventic-afric.com<br />
               </p>
               <div className="social-links mt-3">
-                <a href="#" className="twitter" aria-label="Twitter">
-                  <i className="bx bxl-twitter"></i>
-                </a>
-                <a href="https://www.facebook.com/prevention.santeautravail" target="_blank" rel="noopener noreferrer" className="facebook" aria-label="Facebook">
+                <a
+                  href="https://www.facebook.com/prevention.santeautravail"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="facebook me-2"
+                  aria-label="Facebook"
+                >
                   <i className="bx bxl-facebook"></i>
                 </a>
-                <a href="#" className="linkedin" aria-label="LinkedIn">
+                <a
+                  href="https://www.linkedin.com/in/dr-n-dri-brou-21134890/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="linkedin"
+                  aria-label="LinkedIn"
+                >
                   <i className="bx bxl-linkedin"></i>
                 </a>
               </div>
             </div>
 
             {/* 3. Liens utiles */}
-            <div className="col-lg-3 col-md-6 footer-links">
+            <div className="col-lg-3 col-md-6 footer-links mb-4">
               <h4>Liens utiles</h4>
-              <ul>
-                <li><Link to="/">Accueil</Link></li>
-                <li><Link to="/values">À propos</Link></li>
-                <li><Link to="/offer">Nos Services</Link></li>
-                <li><Link to="/contact">Contact</Link></li>
-                <li><Link to="/mentions-legales">Mentions légales</Link></li>
+              <ul className="list-unstyled">
+                <li><Link to="/" className="text-white">Accueil</Link></li>
+                <li><Link to="/values" className="text-white">À propos</Link></li>
+                <li><Link to="/offer" className="text-white">Nos Services</Link></li>
+                <li><Link to="/contact" className="text-white">Contact</Link></li>
+                <li><Link to="/mentions-legales" className="text-white">Mentions légales</Link></li>
               </ul>
             </div>
 
             {/* 4. Newsletter */}
-            <div className="col-lg-3 col-md-6 footer-newsletter">
+            <div className="col-lg-3 col-md-6 footer-newsletter mb-4">
               <h4>Newsletter</h4>
               <p>Inscrivez-vous au Bulletin d'information</p>
-              <form onSubmit={(e) => e.preventDefault()}>
-                <input type="email" name="email" placeholder="Votre email" required />
-                <input type="submit" value="Souscrire" />
+              <form onSubmit={(e) => e.preventDefault()} className="d-flex">
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Votre email"
+                  required
+                  className="form-control me-2"
+                />
+                <input
+                  type="submit"
+                  value="Souscrire"
+                  className="btn btn-warning"
+                />
               </form>
             </div>
 
@@ -74,10 +99,10 @@ function Footer() {
       </div>
 
       {/* Footer bottom */}
-      <div className="footer-bottom text-center">
+      <div className="footer-bottom text-center py-3" style={{ background: "rgba(0,0,0,0.2)" }}>
         <div className="container">
           <p>© {new Date().getFullYear()} Preventic-Afric. Tous droits réservés.</p>
-          <p><Link to="/#" className="text-white">Mentions légales</Link></p>
+          <p><Link to="/mentions-legales" className="text-white">Mentions légales</Link></p>
         </div>
       </div>
 

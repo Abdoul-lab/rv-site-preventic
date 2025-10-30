@@ -4,18 +4,31 @@ const About = () => {
   return (
     <main id="main">
       {/* ======= Breadcrumbs ======= */}
-      <section id="breadcrumbs" className="breadcrumbs">
-        <div className="container">
-          <div className="d-flex justify-content-between align-items-center">
-            <h2>A propos de nous</h2>
-             <ol>
-              <li><a href="index.html">Accueil</a></li>
-              <li>A propos de nous</li>
-            </ol> 
-          </div>
-        </div>
-      </section>
-      {/* End Breadcrumbs */}
+<section
+  id="breadcrumbs"
+  className="breadcrumbs text-white py-4"
+  style={{
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)",
+  }}
+>
+  <div className="container">
+    <div className="d-flex justify-content-between align-items-center">
+      <h2 className="mb-0">À propos de nous</h2>
+      <ol className="breadcrumb mb-0">
+        <li className="breadcrumb-item">
+          <a href="index.html" className="text-white text-decoration-none">
+            Accueil
+          </a>
+        </li>
+        <li className="breadcrumb-item active text-white">
+          À propos de nous
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+{/* End Breadcrumbs */}
+
 
       {/* ======= Testimonials Section ======= */}
       <section id="testimonials" className="testimonials">

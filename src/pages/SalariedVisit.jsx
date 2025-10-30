@@ -18,16 +18,34 @@ const SalariedVisit = () => {
         <div className="d-flex justify-content-between align-items-center" style={{ width: "100%", flexDirection: "column" }}>
           <img src="/6.jpg" className="img-fluid" alt="Slide" style={{ width: "40%" }} />
           
-          <div className="container-fluid" style={{ backgroundColor: "#d94261", height: "15vh" }}>
-            <h2 style={{ textAlign: "center", color: "#fff", fontWeight: "bold", marginTop: "25px" }}>ESPACE CONSULTATION</h2>
-          </div>
+          <div
+  className="container-fluid"
+  style={{
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // palette bleu → bleu foncé → orange
+    height: "15vh",
+  }}
+>
+  <div>
+    <h2
+      style={{
+        textAlign: "center",
+        color: "#fff",
+        fontWeight: "bold",
+        marginTop: "25px",
+      }}
+    >
+      VOTRE CENTRE MÉDICAL D'ENTREPRISE
+    </h2>
+  </div>
+</div>
+
 
           {/* Section Visite Médicale */}
           <div className="container about" style={containerStyle}>
             <div className="row content">
-              <div className="col-lg-6">
+              <div className="mt-4">
                 <div id="medicale"></div>
-                <h1>VOTRE VISITE MEDICALE</h1>
+                <h1>Vous Venez Pour Une Visite Médicale ?</h1>
               </div>
               <div className="col-lg-6 pt-4 pt-lg-0"></div>
               <p>
@@ -61,9 +79,9 @@ const SalariedVisit = () => {
           {/* Section Formations */}
           <div className="container about" style={containerStyle}>
             <div className="row content">
-              <div className="col-lg-6">
+              <div className="mt-1">
                 <div id="formations"></div>
-                <h1>VOS FORMATIONS</h1>
+                <h1>Vous Venez Pour Une Formations ?</h1>
               </div>
               <div className="col-lg-6 pt-4 pt-lg-0"></div>
               <p>
@@ -79,7 +97,7 @@ const SalariedVisit = () => {
             <div className="row content">
               <div className="col-lg-6">
                 <div id="besoins"></div>
-                <h1>AUTRES BESOINS</h1>
+                <h1>Autres besoins</h1>
               </div>
               <div className="col-lg-6 pt-4 pt-lg-0"></div>
               <p>

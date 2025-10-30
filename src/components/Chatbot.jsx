@@ -3,22 +3,22 @@ import React, { useState, useEffect, useRef } from "react";
 const styles = {
   chatButton: {
     position: "fixed",
-    bottom: 40,
+    bottom: 50,
     right: 5,
     zIndex: 1100,
-    backgroundColor: "#FFA726", // orange clair
+    backgroundColor: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // dégradé de couleur
     border: "none",
     borderRadius: "50%",
     width: 56,
     height: 56,
-    color: "white",
+    color: "#fff",
     fontSize: 28,
     cursor: "pointer",
-    boxShadow: "0 4px 12px rgba(255,167,38,0.4)", // orange clair
+    boxShadow: "0 4px 6px rgba(0,0,0,0.2)", // bleu
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    transition: "all 0.3s ease",
+    transition: "all 0.2s ease",
     animation: "pulse 2s infinite ease-in-out",
   },
   container: {
@@ -31,7 +31,7 @@ const styles = {
     minHeight: 350,
     borderRadius: 16,
     overflow: "hidden",
-    boxShadow: "0 8px 32px rgba(255,167,38,0.15)", // orange clair
+    boxShadow: "0 8px 32px rgba(49, 16, 236, 0.4)", //bleu
     backgroundColor: "#fff",
     fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
     display: "flex",
@@ -41,11 +41,11 @@ const styles = {
   },
   header: {
     margin: 0,
-    padding: "16px 20px",
-    background: "linear-gradient(135deg, #FFA726 0%, #FB8C00 100%)", // orange clair à orange foncé
+    padding: "12px",
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // couleur dégradée
     color: "white",
     fontSize: "1.1rem",
-    fontWeight: "600",
+    fontWeight: "bold",
     textAlign: "center",
   },
   chatBox: {
@@ -99,7 +99,7 @@ const styles = {
   },
   button: {
     padding: "12px 24px",
-    backgroundColor: "#FFA726", // orange clair
+    backgroundColor: "linear-gradient(to right, #93c5fd, #60a5fa, #fdba74)", // dégradé plus doux au survol
     color: "white",
     border: "none",
     borderRadius: 12,
@@ -123,27 +123,28 @@ const styles = {
   },
   tabBar: {
     display: "flex",
-    borderTop: "1px solid #ffe0b2", // orange très clair
+    borderTop: "1px solid #ddd", // orange très clair
     background: "#fff3e0", // orange très très clair
     justifyContent: "space-around",
     alignItems: "center",
-    height: 56,
   },
   tabButton: {
     flex: 1,
     background: "none",
     border: "none",
-    padding: "12px 0",
+    padding: "8px",
+    margin: "0 4px",
     fontSize: "1rem",
-    fontWeight: 600,
-    color: "#FB8C00", // orange foncé
+    fontWeight: 500,
+    color: "#000", // orange foncé
     cursor: "pointer",
-    transition: "background 0.2s",
+    transition: "background 0.3s, transform 0.2s",
   },
   tabButtonActive: {
-    background: "#FFA726", // orange clair
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // dégradée 
     color: "#fff",
-    borderRadius: 0,
+    fontWeight: "bold",
+    transform: "scale(1.05)",
   },
   accueilBox: {
     padding: "24px 16px",
@@ -232,7 +233,7 @@ document.head.appendChild(styleSheet);
 // Ajout d'une base de scénarios pour l'onglet IA
 const iaScenarios = {
   menu: {
-    text: `Bonjour 👋 ! Je suis Docta votre assistante virtuelle 
+    text: `Bonjour 👋 ! 
 Comment puis-je vous aider aujourd’hui ?
 1️⃣ Formations
 2️⃣ Accompagnement entreprises & indépendants
@@ -393,36 +394,24 @@ function findIaScenario(userInput, currentScenarioKey = "menu") {
   return currentScenarioKey;
 }
 
-const notificationSoundUrl = "https://cdn.pixabay.com/audio/2022/07/26/audio_124bfa1c82.mp3";
+const notificationSoundUrl = "./assets/sounds/chatbot-notification.mp3";
 
-const Chatbot = ({ autoOpen = false }) => {
-  const [open, setOpen] = useState(() => {
-    // Si déjà fermé manuellement, ne pas rouvrir automatiquement
-    const closed = localStorage.getItem("chatbot_closed");
-    return closed ? false : false;
-  });
-  const [autoOpened, setAutoOpened] = useState(false);
+const Chatbot = ({ autoOpen = true }) => { 
+  const [open, setOpen] = useState(false);
+  const [hasAutoOpened, setHasAutoOpened] = useState(false);
 
   useEffect(() => {
-    if (autoOpen && !autoOpened && !localStorage.getItem("chatbot_closed")) {
+    if (autoOpen && !hasAutoOpened) {
       setOpen(true);
-      setAutoOpened(true);
+      setHasAutoOpened(true);
       const audio = new Audio(notificationSoundUrl);
       audio.play().catch(() => {});
     }
-  }, [autoOpen, autoOpened]);
+  }, [autoOpen, hasAutoOpened]);
 
-  // Quand on ferme manuellement, on le mémorise
   const handleToggle = () => {
-    if (open) {
-      localStorage.setItem("chatbot_closed", "1");
-      setOpen(false);
-    } else {
-      setOpen(true);
-      localStorage.removeItem("chatbot_closed");
-    }
+    setOpen(!open);
   };
-
   const [tab, setTab] = useState("accueil");
   const [rdvMessages, setRdvMessages] = useState([
     {
@@ -450,10 +439,12 @@ const Chatbot = ({ autoOpen = false }) => {
         "Étudiant/stagiaire",
         "Association/collectivité",
         "Demandeur d'emploi",
+        "Patient",
+        "Autres",
       ],
       next: (form) => {
         switch (form.company_type) {
-          case "Personne morale (Entreprise/Association)":
+          case "Personne morale (Entreprise)":
             return "company_activity";
           case "Employé d'entreprise":
             return "employee_company";
@@ -471,7 +462,7 @@ const Chatbot = ({ autoOpen = false }) => {
       },
     },
 
-    // Personne morale (Entreprise/Association)
+    // Personne morale (Entreprise)
     company_activity: {
       key: "company_activity",
       text: "💼 Domaine d'activités *",
@@ -867,7 +858,7 @@ const Chatbot = ({ autoOpen = false }) => {
                 rel="noopener noreferrer"
                 style={styles.formLink}
               >
-                📋 Voir mon formulaire Google pré-rempli
+                📋 Veuillez confirmer vos informations
               </a>
             ),
           },
@@ -906,7 +897,7 @@ const Chatbot = ({ autoOpen = false }) => {
                 rel="noopener noreferrer"
                 style={styles.formLink}
               >
-                📋 Voir mon formulaire Google pré-rempli
+                📋 Veuillez confirmer vos infos
               </a>
             ),
           },
@@ -970,18 +961,17 @@ const Chatbot = ({ autoOpen = false }) => {
   // --- Effet de saisie pour l'accueil ---
   const accueilLines = [
     "",
-    "",
     "Bonjour et Bienvenue sur Preventic-Afric! Nous sommes spécialisés dans la prévention santé & sécurité au travail.",
     "",
     "Nos services :",
-    "• Formations SST, sécurité, secourisme",
-    "• Accompagnement entreprises & indépendants",
-    "• Conseils personnalisés",
-    "• Prise de rendez-vous",
+    "• Visites médicales (visites d'embauche, périodiques, de reprise...)",
+    "• Surveillance des conditions de travail",
+    "• Formations",
+    "• Assistance et conseils",
     "",
     "Contact :",
-    "📞 +225 05 04 46 38 05",
-    "✉️ contact@preventic-afric.com",
+    "📞 +225 07 07 20 48 45",
+    "✉️ info@preventic-afric.com",
     "🌐 preventic-afric.com",
     "",
     "Cliquez sur le bouton ci-dessous 👇 pour auto-évaluer votre stress😰",
@@ -1034,12 +1024,27 @@ const Chatbot = ({ autoOpen = false }) => {
       )}
       {accueilDisplayedLines.length === accueilLines.length && (
         <button
-          style={styles.stressShortcut}
-          onClick={openStressModal}
-          type="button"
-        >
-          📝 Auto-évaluer mon stress 😰
-        </button>
+  onClick={openStressModal}
+  type="button"
+  style={{
+    padding: "12px 25px",
+    fontWeight: "bold",
+    color: "#fff",
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // dégradé
+    border: "none",
+    borderRadius: "25px",
+    cursor: "pointer",
+    transition: "transform 0.2s, opacity 0.3s",
+    display: "inline-flex",
+    alignItems: "center",
+    gap: "8px",
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+>
+  📝 Auto-évaluer mon stress 😰
+</button>
+
       )}
     </div>
   );
@@ -1065,7 +1070,7 @@ const Chatbot = ({ autoOpen = false }) => {
             {m.text}
           </div>
         ))}
-        {loading && <div style={styles.message}>✍️ Docta écrit...</div>}
+        {loading && <div style={styles.message}>✍️...</div>}
       </div>
       {!loading && currentKey && (
         <form onSubmit={handleRdvSubmit} style={styles.form}>
@@ -1118,7 +1123,7 @@ const Chatbot = ({ autoOpen = false }) => {
           {m.text}
         </div>
       ))}
-      {iaLoading && <div style={styles.message}>✍️ Docta écrit...</div>}
+      {iaLoading && <div style={styles.message}>✍️...</div>}
       {!iaLoading && (
         <form onSubmit={handleIaSubmit} style={styles.form}>
           <input
@@ -1148,7 +1153,7 @@ const Chatbot = ({ autoOpen = false }) => {
       </button>
       {open && (
         <div style={styles.container}>
-          <div style={styles.header}>👩‍💼Docta – Préventic Afric 🩺</div>
+          <div style={styles.header}>🦺 Préventic Afric 🩺</div>
           <div style={{ flex: 1, minHeight: 200, background: "#f9fafb", display: "flex", flexDirection: "column" }}>
             <div
               style={{ flex: 1, overflow: "auto" }}
@@ -1175,7 +1180,7 @@ const Chatbot = ({ autoOpen = false }) => {
                 }}
                 onClick={() => setTab("ia")}
               >
-                Conversation IA
+                Conversation
               </button>
               <button
                 style={{

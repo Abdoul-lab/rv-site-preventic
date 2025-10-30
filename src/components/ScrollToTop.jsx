@@ -47,8 +47,8 @@ const ScrollToTop = () => {
           }}
           style={{
             position: 'fixed',
-            bottom: '20px',
-            right: '20px',
+            bottom: '10px',
+            right: '15px',
             padding: '10px 20px',
             backgroundColor: '#FF0000', // Couleur du fond (change ici)
             color: '#fff', // Couleur du texte (change ici)

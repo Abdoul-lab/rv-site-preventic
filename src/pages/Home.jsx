@@ -3,27 +3,47 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 
-import img1 from "../assets/img/slide/IvoirePics6.jpg";
+import img1 from "../assets/img/slide/IvoirePics10.jpg";
 import img2 from "../assets/img/slide/IvoirePics3.jpg";
 import img3 from "../assets/img/slide/IvoirePics4.jpg";
 import img4 from "../assets/img/slide/IvoirePics5.jpg";
 import img5 from "../assets/img/slide/IvoirePics7.jpg";
 import LogoMarquee from "../components/marque";
-import Chatbot from "../components/Chatbot";
-
+import { Button } from "react-bootstrap";
 
 function Home() {
   const [showMore, setShowMore] = useState(false);
 
   return (
+      <>
     <div className="container-fluid" style={{ backgroundColor: "#f1ebeb", marginTop: "10%" }}>
       {/* Marquee */}
       <marquee behavior="scroll" direction="left">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfq4yaTSCTlKvHcMLkHFynfpOQCRuOILlboK2I4fDe0P1zbQg/viewform?usp=pp_url"
-          style={{ color: "blue", textDecoration: "none" }} target="_blank" rel="noopener noreferrer">
-          <h2>Inscription ici ←</h2>
-        </a>
+        <a
+  href="https://forms.gle/DJGoPznB2kQ8am228"
+  target="_blank"
+  rel="noopener noreferrer"
+  style={{
+    display: "inline-block",
+    padding: "10px 30px",
+    fontWeight: "bold",
+    color: "#fff",
+    textDecoration: "none",
+    borderRadius: "8px",
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // dégradé bleu → bleu foncé → orange
+    textAlign: "center",
+    transition: "transform 0.2s",
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+>
+  <h5 style={{ margin: 0 }}>
+    Cliquez ici ← pour vous inscrire via un formulaire de prise de contact pour un accompagnement personnalisé de votre structure
+  </h5>
+</a>
+
       </marquee>
+
 
       {/* Hero Section */}
       <div className="container">
@@ -40,7 +60,7 @@ function Home() {
               <div className="carousel-inner" style={{ borderRadius: "20px" }}>
                 <div className="carousel-item active" data-bs-interval="10000">
                   <video width="100%" controls autoPlay>
-                    <source src="/assets/prenventic_afric.mp4" type="video/mp4" />
+                    <source src="/assets/presentationServicePreventic.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
                 </div>
@@ -91,9 +111,24 @@ function Home() {
                     </ul>
                   </>
                 )}
-                <button onClick={() => setShowMore(!showMore)} className="btn btn-primary">
-                  {showMore ? "Lire moins" : "Lire la suite"}
-                </button>
+                <button
+  onClick={() => setShowMore(!showMore)}
+  style={{
+    padding: "10px 25px",
+    fontWeight: "bold",
+    color: "#fff",
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // dégradé bleu → bleu foncé → orange
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+    transition: "transform 0.2s",
+  }}
+  onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+>
+  {showMore ? "Lire moins" : "Lire la suite"}
+</button>
+
               </div>
             </div>
           </div>
@@ -152,28 +187,28 @@ function Home() {
             <div className="col-md-3">
               <div className="icon-box">
                 <i className="bi bi-briefcase"></i>
-                <h4><HashLink smooth to="/adhesion#adherer" style={{ color: "#ee7f00" }}>Adhérer</HashLink></h4>
+                <h4><HashLink smooth to="https://forms.gle/sYeoiA1QVc6CdRzt8" style={{ color: "#ee7f00" }}>Adhérer</HashLink></h4>
                 <p>Quel que soit votre domaine d’activité, rejoignez-nous.</p>
               </div>
             </div>
             <div className="col-md-3 mt-1 mt-md-0">
               <div className="icon-box">
                 <i className="bi bi-card-checklist"></i>
-                <h4><Link to="/about" style={{ color: "#ee7f00" }}>Nous trouver</Link></h4>
+                <h4><Link to="/contact" style={{ color: "#ee7f00" }}>Nous trouver</Link></h4>
                 <p>Découvrez où nous sommes situés.</p>
               </div>
             </div>
             <div className="col-md-3 mt-1 mt-md-0">
               <div className="icon-box">
                 <i className="bi bi-bar-chart"></i>
-                <h4><Link to="/agenda" style={{ color: "#ee7f00" }}>Votre agenda</Link></h4>
+                <h4><Link to="/" style={{ color: "#ee7f00" }}>Votre agenda</Link></h4>
                 <p>Consultez notre agenda trimestriel.</p>
               </div>
             </div>
             <div className="col-md-3 mt-1 mt-md-0">
               <div className="icon-box">
                 <i className="bi bi-binoculars"></i>
-                <h4><Link to="/team" style={{ color: "#ee7f00" }}>Le mag</Link></h4>
+                <h4><Link to="/" style={{ color: "#ee7f00" }}>Le mag</Link></h4>
                 <p>Découvrez notre magazine et nos actualités.</p>
               </div>
             </div>
@@ -183,18 +218,30 @@ function Home() {
 
       {/* CTA Newsletter */}
       <section className="text-center">
-        <h5>Recevez nos actualités et conseils santé en vous abonnant à notre newsletter</h5>
-        <a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSfq4yaTSCTlKvHcMLkHFynfpOQCRuOILlboK2I4fDe0P1zbQg/viewform?usp=pp_url"
-          className="btn btn-warning mt-3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          S'inscrire à la newsletter
-        </a>
-      </section>
-      <Chatbot autoOpen={true} />
-    </div>
+  <h5>Recevez nos actualités et conseils santé en vous abonnant à notre newsletter</h5>
+  <a
+    href="https://forms.gle/obER48NgdTwgZ4CPA"
+    target="_blank"
+    rel="noopener noreferrer"
+    style={{
+      display: "inline-block",
+      padding: "12px 30px",
+      fontWeight: "bold",
+      color: "#fff",
+      textDecoration: "none",
+      borderRadius: "8px",
+      background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // dégradé bleu → bleu foncé → orange
+      transition: "transform 0.2s",
+    }}
+    onMouseEnter={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
+    onMouseLeave={(e) => (e.currentTarget.style.transform = "scale(1)")}
+  >
+    S'inscrire à la newsletter
+  </a>
+</section>
+
+    
+    </div></>
   );
 }
 

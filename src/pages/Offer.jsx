@@ -14,18 +14,32 @@ const Offer = () => {
         <div style={{ width: '100%' }}>
           <div className="d-flex justify-content-between align-items-center flex-column" style={{ width: '100%' }}>
             <img
-              src="/5.jpg"
+              src="/4.jpg"
               className="img-fluid"
               alt=""
               style={{ width: '20%'}}
             />
-            <div className="container-fluid" style={{ backgroundColor: '#d94261', height: '15vh' }}>
-              <div>
-                <h2 style={{ textAlign: 'center', color: '#fff', fontWeight: 'bold' }}>
-                  NOS OFFRES DE SERVICE
-                </h2>
-              </div>
-            </div>
+            <div
+  className="container-fluid"
+  style={{
+    background: "linear-gradient(to right, #2563eb, #1e40af, #f97316)", // palette bleu → bleu foncé → orange
+    height: "15vh",
+  }}
+>
+  <div>
+    <h2
+      style={{
+        textAlign: "center",
+        color: "#fff",
+        fontWeight: "bold",
+        marginTop: "25px",
+      }}
+    >
+      NOS OFFRES DE SERVICES
+    </h2>
+  </div>
+</div>
+
 
             <div className="container about mx-auto" style={sectionContainerStyle}>
               <div className="row justify-content-center">
@@ -36,10 +50,10 @@ const Offer = () => {
                     La réalisation de visites médicales répond à l’article 43.2 du code du travail en rapport avec la surveillance médicale des travailleurs. Ainsi, nous organisons les visites médicales suivantes au profit de toute entreprise :
                   </p>
                   <ul className="fst-italic">
-                    <li><strong>Visites d’embauche :</strong><br></br>Elles permettent de s’assurer que le travailleur a les aptitudes médicales requises pour le poste à occupe</li>
-                    <li><strong>Visites médicales périodiques:</strong><br></br>Ces visites médicales dont la périodicité peut varier en fonction des risques auxquels le travailleur est exposé pendant son travail, servent à s’assurer du maintien de son aptitude à exercer ses activités professionnelles.</li>
-                    <li><strong>Visites de reprise:</strong><br></br>Elles sont se font après une absence prolongée</li>
-                    <li><strong>Visites occasionnelles:</strong> <br></br>Elles se font à la demande de l’employeur ou du salarié</li>
+                    <li><strong>Visites d’embauche :</strong><br></br>Elles permettent de s’assurer que le travailleur a les aptitudes médicales requises pour le poste à occuper. Elle doit être réalisée avant la fin de la période d'essai.</li>
+                    <li><strong>Visites médicales périodiques :</strong><br></br>Ces visites médicales dont la périodicité peut varier en fonction des risques auxquels le travailleur est exposé pendant son travail, servent à s’assurer du maintien de son aptitude à exercer ses activités professionnelles.</li>
+                    <li><strong>Visites de reprise :</strong><br></br>Elles sont se font après une absence prolongée pour raison de santé.</li>
+                    <li><strong>Visites médicales à la demande :</strong> <br></br>Elles se font à la demande de l’employeur ou du salarié.</li>
                   </ul>
                 </div>
               </div>
@@ -75,7 +89,7 @@ const Offer = () => {
                   <div id="examens-biologiques"></div>
                   <h1>Examens biologiques</h1>
                   <p className="fst-italic">
-                    Nous proposons un large éventail d’analyses médicales en partenariat avec des laboratoires agréés. Ces examens peuvent être réalisés sur site ou dans nos centres partenaires.
+                    Nous disposons d'un laboratoire capable de réaliser des examens biologiques dans le cadre de la surveillance de la santé des travailleurs. Nos équipes peuvent se déplacer sur les sites des entreprises pour les différents prélèvements.
                   </p>
                 </div>
               </div>
