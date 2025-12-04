@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 
 
-import img1 from "../assets/img/slide/IvoirePics10.jpg";
+import img1 from "../assets/img/slide/IvoirePics10.jpeg";
 import img2 from "../assets/img/slide/IvoirePics3.jpg";
 import img3 from "../assets/img/slide/IvoirePics4.jpg";
 import img4 from "../assets/img/slide/IvoirePics5.jpg";
